@@ -67,9 +67,9 @@
               "Title": "QuestionManager.Designer.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.Designer.cs",
               "RelativeDocumentMoniker": "QuestionManager.Designer.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.Designer.cs",
-              "RelativeToolTip": "QuestionManager.Designer.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwEcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.Designer.cs*",
+              "RelativeToolTip": "QuestionManager.Designer.cs*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T13:13:41.175Z",
               "EditorCaption": ""
@@ -93,11 +93,15 @@
               "Title": "QuestionManager.cs [Design]",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
               "RelativeDocumentMoniker": "QuestionManager.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs [Design]",
-              "RelativeToolTip": "QuestionManager.cs [Design]",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs [Design]*",
+              "RelativeToolTip": "QuestionManager.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T13:10:11.866Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
@@ -105,16 +109,12 @@
               "Title": "QuestionManager.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
               "RelativeDocumentMoniker": "QuestionManager.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
-              "RelativeToolTip": "QuestionManager.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs*",
+              "RelativeToolTip": "QuestionManager.cs*",
               "ViewState": "AgIAAAIAAAAAAAAAAAASwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T14:05:52.502Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
