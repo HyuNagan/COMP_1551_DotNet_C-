@@ -142,3 +142,4 @@ C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-wi
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.QuestionManager.resources
+C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.PlayGameForm.resources
