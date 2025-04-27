@@ -24,6 +24,14 @@ namespace COMP1551
             MultipleCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
             TrueFalseCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
             OpenEndedCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
+            this.FormClosed += QuestionManager_FormClosed; // Add the FormClosed event handler
+
+        }
+        private void QuestionManager_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // When this form is closed, show the Menu form again
+            Menu menuForm = new Menu();
+            menuForm.Show();
         }
 
         private void QuestionManager_Load(object sender, EventArgs e) => LoadQuestions();

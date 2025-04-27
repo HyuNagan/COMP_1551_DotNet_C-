@@ -26,7 +26,16 @@ namespace COMP1551
             button3.Click += Button_Click;
             button4.Click += Button_Click;
             SubmitBTN.Click += SubmitBTN_Click;
+            this.FormClosed += PlayGameForm_FormClosed; // Add the FormClosed event handler
+
         }
+        private void PlayGameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // When this form is closed, show the Menu form again
+            Menu menuForm = new Menu();
+            menuForm.Show();
+        }
+
 
         // Load câu hỏi từ database và cập nhật giao diện
         private void LoadQuestion()

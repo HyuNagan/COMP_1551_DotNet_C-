@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            PlayGameBTN = new Button();
+            QuestionManagementBTN = new Button();
+            SuspendLayout();
+            // 
+            // PlayGameBTN
+            // 
+            PlayGameBTN.Location = new Point(293, 115);
+            PlayGameBTN.Name = "PlayGameBTN";
+            PlayGameBTN.Size = new Size(199, 80);
+            PlayGameBTN.TabIndex = 0;
+            PlayGameBTN.Text = "Play Game";
+            PlayGameBTN.UseVisualStyleBackColor = true;
+            // 
+            // QuestionManagementBTN
+            // 
+            QuestionManagementBTN.Location = new Point(293, 246);
+            QuestionManagementBTN.Name = "QuestionManagementBTN";
+            QuestionManagementBTN.Size = new Size(199, 80);
+            QuestionManagementBTN.TabIndex = 0;
+            QuestionManagementBTN.Text = "Question Management";
+            QuestionManagementBTN.UseVisualStyleBackColor = true;
+            // 
+            // Menu
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(QuestionManagementBTN);
+            Controls.Add(PlayGameBTN);
+            Name = "Menu";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button PlayGameBTN;
+        private Button QuestionManagementBTN;
     }
 }
