@@ -9,6 +9,10 @@ namespace COMP1551
             QuestionManagementBTN.Click += QuestionManagementBTN_Click;
 
         }
+        public void UpdateScore(int score)
+        {
+            ScoreValueLBL.Text = $"Score: {score}";
+        }
 
         // Event handler for PlayGame button click
         private void PlayGameBTN_Click(object sender, EventArgs e)

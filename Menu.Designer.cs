@@ -30,6 +30,7 @@
         {
             PlayGameBTN = new Button();
             QuestionManagementBTN = new Button();
+            ScoreValueLBL = new Label();
             SuspendLayout();
             // 
             // PlayGameBTN
@@ -50,21 +51,33 @@
             QuestionManagementBTN.Text = "Question Management";
             QuestionManagementBTN.UseVisualStyleBackColor = true;
             // 
+            // ScoreValueLBL
+            // 
+            ScoreValueLBL.AutoSize = true;
+            ScoreValueLBL.Location = new Point(15, 17);
+            ScoreValueLBL.Name = "ScoreValueLBL";
+            ScoreValueLBL.Size = new Size(46, 20);
+            ScoreValueLBL.TabIndex = 1;
+            ScoreValueLBL.Text = "Score";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ScoreValueLBL);
             Controls.Add(QuestionManagementBTN);
             Controls.Add(PlayGameBTN);
             Name = "Menu";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button PlayGameBTN;
         private Button QuestionManagementBTN;
+        private Label ScoreValueLBL;
     }
 }

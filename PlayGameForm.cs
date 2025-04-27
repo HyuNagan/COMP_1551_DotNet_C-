@@ -34,6 +34,7 @@ namespace COMP1551
         {
             // Show the Menu form when the PlayGameForm is closed
             Menu menuForm = new Menu();
+            menuForm.UpdateScore(score);
             menuForm.Show();
         }
 
