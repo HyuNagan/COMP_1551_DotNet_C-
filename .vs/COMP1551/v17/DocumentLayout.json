@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\dbcontext\\quizdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:dbcontext\\quizdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,11 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "QuizDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\DBContext\\QuizDbContext.cs",
+              "RelativeDocumentMoniker": "DBContext\\QuizDbContext.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\DBContext\\QuizDbContext.cs",
+              "RelativeToolTip": "DBContext\\QuizDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:40:58.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PlayGameForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeDocumentMoniker": "PlayGameForm.cs",
@@ -62,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PlayGameForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.Designer.cs",
               "RelativeDocumentMoniker": "PlayGameForm.Designer.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -88,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Menu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
@@ -100,20 +117,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
               "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
               "RelativeToolTip": "Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwA8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T11:27:51.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "QuestionManager.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
               "RelativeDocumentMoniker": "QuestionManager.cs",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayGameForm.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeDocumentMoniker": "PlayGameForm.cs",
@@ -139,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "QuestionManager.cs [Design]",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
               "RelativeDocumentMoniker": "QuestionManager.cs",
@@ -151,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Menu.Designer.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.Designer.cs",
               "RelativeDocumentMoniker": "Menu.Designer.cs",
