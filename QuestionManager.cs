@@ -11,24 +11,22 @@ namespace COMP1551
         public QuestionManager()
         {
             InitializeComponent();
-            this.Load += new EventHandler(QuestionManager_Load); // Đăng ký sự kiện Load
-            dataGridView1.SelectionChanged += new EventHandler(dataGridView1_SelectionChanged); // Đăng ký sự kiện SelectionChanged
+            InitializeEventHandlers();
+        }
 
-            // Đăng ký các sự kiện cho các button
+        private void InitializeEventHandlers()
+        {
+            this.Load += new EventHandler(QuestionManager_Load);
+            dataGridView1.SelectionChanged += new EventHandler(dataGridView1_SelectionChanged);
             CreateButton.Click += new EventHandler(CreateButton_Click);
             UpdateButton.Click += new EventHandler(UpdateButton_Click);
             DeleteButton.Click += new EventHandler(DeleteButton_Click);
-
-            // Đăng ký sự kiện thay đổi loại câu hỏi
             MultipleCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
             TrueFalseCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
             OpenEndedCheckBox.CheckedChanged += new EventHandler(QuestionTypeChanged);
         }
 
-        private void QuestionManager_Load(object sender, EventArgs e)
-        {
-            LoadQuestions();
-        }
+        private void QuestionManager_Load(object sender, EventArgs e) => LoadQuestions();
 
         private void LoadQuestions()
         {
@@ -50,174 +48,197 @@ namespace COMP1551
                                            })
                                            .ToList();
 
-                    // Gán dữ liệu vào DataGridView
                     dataGridView1.DataSource = questions;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                ShowError("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
-        // Tạo mới câu hỏi
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu người dùng đã chọn hơn một loại câu hỏi
-            if ((MultipleCheckBox.Checked && TrueFalseCheckBox.Checked) ||
-                (MultipleCheckBox.Checked && OpenEndedCheckBox.Checked) ||
-                (TrueFalseCheckBox.Checked && OpenEndedCheckBox.Checked))
+            if (IsMultipleQuestionTypeSelected())
             {
-                MessageBox.Show("Bạn chỉ được chọn một loại câu hỏi duy nhất!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Dừng việc tạo câu hỏi nếu có nhiều loại câu hỏi được chọn
+                ShowError("Bạn chỉ được chọn một loại câu hỏi duy nhất!");
+                return;
             }
 
-            using (var context = new QuizDbContext())
-            {
-                var newQuestion = new Question
-                {
-                    Text = QuestionNameTextBox.Text,
-                    Type = MultipleCheckBox.Checked ? QuestionType.MultipleChoice :
-                          TrueFalseCheckBox.Checked ? QuestionType.TrueFalse : QuestionType.OpenEnded,
-                    OptionA = OptionATextBox.Text,
-                    OptionB = OptionBTextBox.Text,
-                    OptionC = OptionCTextBox.Text,
-                    OptionD = OptionDTextBox.Text,
-                    Answer = GetSelectedAnswer() // Đảm bảo lấy câu trả lời đúng
-                };
-
-                context.Questions.Add(newQuestion);
-                context.SaveChanges();
-            }
-            LoadQuestions(); // Load lại danh sách câu hỏi từ database
+            var newQuestion = CreateNewQuestion();
+            AddQuestionToDatabase(newQuestion);
+            LoadQuestions();
         }
 
-        // Cập nhật câu hỏi
+        private bool IsMultipleQuestionTypeSelected() =>
+            (MultipleCheckBox.Checked && TrueFalseCheckBox.Checked) ||
+            (MultipleCheckBox.Checked && OpenEndedCheckBox.Checked) ||
+            (TrueFalseCheckBox.Checked && OpenEndedCheckBox.Checked);
+
+        private Question CreateNewQuestion()
+        {
+            return new Question
+            {
+                Text = QuestionNameTextBox.Text,
+                Type = GetSelectedQuestionType(),
+                OptionA = OptionATextBox.Text,
+                OptionB = OptionBTextBox.Text,
+                OptionC = OptionCTextBox.Text,
+                OptionD = OptionDTextBox.Text,
+                Answer = GetSelectedAnswer()
+            };
+        }
+
+        private QuestionType GetSelectedQuestionType()
+        {
+            if (MultipleCheckBox.Checked) return QuestionType.MultipleChoice;
+            if (TrueFalseCheckBox.Checked) return QuestionType.TrueFalse;
+            return QuestionType.OpenEnded;
+        }
+
+        private void AddQuestionToDatabase(Question question)
+        {
+            using (var context = new QuizDbContext())
+            {
+                context.Questions.Add(question);
+                context.SaveChanges();
+            }
+        }
+
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var selectedRow = dataGridView1.SelectedRows[0];
-                int questionId = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                var questionId = GetSelectedQuestionId();
+                var question = GetQuestionById(questionId);
 
-                using (var context = new QuizDbContext())
+                if (question != null)
                 {
-                    var question = context.Questions.FirstOrDefault(q => q.Id == questionId);
-                    if (question != null)
-                    {
-                        question.Text = QuestionNameTextBox.Text;
-
-                        // Lưu lại loại câu hỏi
-                        question.Type = MultipleCheckBox.Checked ? QuestionType.MultipleChoice :
-                                         TrueFalseCheckBox.Checked ? QuestionType.TrueFalse : QuestionType.OpenEnded;
-
-                        // Cập nhật câu hỏi khi chuyển sang MultipleChoice
-                        if (question.Type == QuestionType.MultipleChoice)
-                        {
-                            // Đảm bảo các tùy chọn A, B, C, D không bị null
-                            question.OptionA = OptionATextBox.Text;
-                            question.OptionB = OptionBTextBox.Text;
-                            question.OptionC = OptionCTextBox.Text;
-                            question.OptionD = OptionDTextBox.Text;
-
-                            // Lưu lại câu trả lời đúng
-                            question.Answer = GetSelectedAnswer(); // Câu trả lời đúng cho MultipleChoice
-                        }
-                        else if (question.Type == QuestionType.TrueFalse)
-                        {
-                            // Khi chuyển sang True/False, đặt các tùy chọn A, B, C, D sao cho không NULL
-                            question.OptionA = " ";  // Đặt giá trị mặc định cho OptionA
-                            question.OptionB = " "; // Đặt giá trị mặc định cho OptionB
-                            question.OptionC = " ";  // Không sử dụng
-                            question.OptionD = " ";  // Không sử dụng
-
-                            // Cập nhật câu trả lời đúng
-                            if (TrueAnswer.Checked)
-                            {
-                                question.Answer = "True";  // Câu trả lời đúng là True
-                            }
-                            else if (FalseAnswer.Checked)
-                            {
-                                question.Answer = "False"; // Câu trả lời đúng là False
-                            }
-                        }
-
-                        context.SaveChanges();  // Lưu lại thay đổi vào cơ sở dữ liệu
-                    }
+                    UpdateQuestion(question);
+                    SaveChanges();
+                    LoadQuestions();
                 }
-
-                LoadQuestions(); // Load lại danh sách câu hỏi
             }
         }
 
+        private int GetSelectedQuestionId() =>
+            Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
 
+        private Question GetQuestionById(int questionId)
+        {
+            using (var context = new QuizDbContext())
+            {
+                return context.Questions.FirstOrDefault(q => q.Id == questionId);
+            }
+        }
 
+        private void UpdateQuestion(Question question)
+        {
+            question.Text = QuestionNameTextBox.Text;
+            question.Type = GetSelectedQuestionType();
+            UpdateQuestionOptions(question);
+            question.Answer = GetSelectedAnswer();
+        }
 
-        // Xóa câu hỏi
+        private void UpdateQuestionOptions(Question question)
+        {
+            if (question.Type == QuestionType.MultipleChoice)
+            {
+                question.OptionA = OptionATextBox.Text;
+                question.OptionB = OptionBTextBox.Text;
+                question.OptionC = OptionCTextBox.Text;
+                question.OptionD = OptionDTextBox.Text;
+            }
+            else if (question.Type == QuestionType.TrueFalse)
+            {
+                question.OptionA = " ";
+                question.OptionB = " ";
+                question.OptionC = " ";
+                question.OptionD = " ";
+            }
+        }
+
+        private void SaveChanges()
+        {
+            using (var context = new QuizDbContext())
+            {
+                context.SaveChanges();
+            }
+        }
+
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var selectedRow = dataGridView1.SelectedRows[0];
-                int questionId = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                var questionId = GetSelectedQuestionId();
+                var question = GetQuestionById(questionId);
 
-                using (var context = new QuizDbContext())
+                if (question != null)
                 {
-                    var question = context.Questions.FirstOrDefault(q => q.Id == questionId);
-                    if (question != null)
-                    {
-                        context.Questions.Remove(question);
-                        context.SaveChanges();
-                    }
+                    DeleteQuestionFromDatabase(question);
+                    LoadQuestions();
                 }
-                LoadQuestions(); // Load lại danh sách câu hỏi
+                else
+                {
+                    ShowError("Không tìm thấy câu hỏi cần xóa.");
+                }
+            }
+            else
+            {
+                ShowError("Vui lòng chọn câu hỏi cần xóa.");
             }
         }
 
-        // Hiển thị thông tin câu hỏi vào các textbox khi chọn câu hỏi từ DataGridView
+        private void DeleteQuestionFromDatabase(Question question)
+        {
+            using (var context = new QuizDbContext())
+            {
+                context.Questions.Remove(question);
+                context.SaveChanges();
+            }
+        }
+
+        private void ShowError(string message) => MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var selectedRow = dataGridView1.SelectedRows[0];
-                int questionId = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                var questionId = GetSelectedQuestionId();
+                var question = GetQuestionById(questionId);
 
-                using (var context = new QuizDbContext())
+                if (question != null)
                 {
-                    var question = context.Questions.FirstOrDefault(q => q.Id == questionId);
-                    if (question != null)
-                    {
-                        // Hiển thị thông tin câu hỏi vào các textbox
-                        QuestionNameTextBox.Text = question.Text;
-                        OptionATextBox.Text = question.OptionA;
-                        OptionBTextBox.Text = question.OptionB;
-                        OptionCTextBox.Text = question.OptionC;
-                        OptionDTextBox.Text = question.OptionD;
-                        OpenEndedTextBox.Text = question.Answer;
-
-                        // Cập nhật các checkbox theo loại câu hỏi
-                        MultipleCheckBox.Checked = question.Type == QuestionType.MultipleChoice;
-                        TrueFalseCheckBox.Checked = question.Type == QuestionType.TrueFalse;
-                        OpenEndedCheckBox.Checked = question.Type == QuestionType.OpenEnded;
-
-                        // Cập nhật câu trả lời đúng cho các loại câu hỏi
-                        AnswerA.Checked = question.Answer == "A";
-                        AnswerB.Checked = question.Answer == "B";
-                        AnswerC.Checked = question.Answer == "C";
-                        AnswerD.Checked = question.Answer == "D";
-                        TrueAnswer.Checked = question.Answer == "True";
-                        FalseAnswer.Checked = question.Answer == "False";
-                    }
+                    DisplayQuestionDetails(question);
                 }
             }
         }
 
-        // Lấy câu trả lời đúng
+        private void DisplayQuestionDetails(Question question)
+        {
+            QuestionNameTextBox.Text = question.Text;
+            OptionATextBox.Text = question.OptionA;
+            OptionBTextBox.Text = question.OptionB;
+            OptionCTextBox.Text = question.OptionC;
+            OptionDTextBox.Text = question.OptionD;
+            OpenEndedTextBox.Text = question.Answer;
+
+            MultipleCheckBox.Checked = question.Type == QuestionType.MultipleChoice;
+            TrueFalseCheckBox.Checked = question.Type == QuestionType.TrueFalse;
+            OpenEndedCheckBox.Checked = question.Type == QuestionType.OpenEnded;
+
+            AnswerA.Checked = question.Answer == "A";
+            AnswerB.Checked = question.Answer == "B";
+            AnswerC.Checked = question.Answer == "C";
+            AnswerD.Checked = question.Answer == "D";
+            TrueAnswer.Checked = question.Answer == "True";
+            FalseAnswer.Checked = question.Answer == "False";
+        }
+
         private string GetSelectedAnswer()
         {
             if (MultipleCheckBox.Checked)
             {
-                // Nếu kiểu câu hỏi là MultipleChoice, trả về đáp án "A", "B", "C", "D"
                 if (AnswerA.Checked) return "A";
                 if (AnswerB.Checked) return "B";
                 if (AnswerC.Checked) return "C";
@@ -225,93 +246,58 @@ namespace COMP1551
             }
             else if (TrueFalseCheckBox.Checked)
             {
-                // Nếu kiểu câu hỏi là TrueFalse, trả về "True" hoặc "False"
                 if (TrueAnswer.Checked) return "True";
                 if (FalseAnswer.Checked) return "False";
             }
             return null;
         }
 
-
-        // Hàm xử lý khi thay đổi loại câu hỏi
         private void QuestionTypeChanged(object sender, EventArgs e)
         {
-            // Kiểm tra khi chọn MultipleChoice
             if (MultipleCheckBox.Checked)
             {
-                // Nếu chọn MultipleChoice, cho phép nhập A, B, C, D
-                OptionATextBox.Enabled = true;
-                OptionBTextBox.Enabled = true;
-                OptionCTextBox.Enabled = true;
-                OptionDTextBox.Enabled = true;
-
-                // Vô hiệu hóa các checkbox câu trả lời true/false, chỉ cho phép lựa chọn A, B, C, D
-                TrueAnswer.Enabled = false;
-                FalseAnswer.Enabled = false;
-
-                // Chỉ cho phép chọn câu trả lời trong MultipleChoice
-                AnswerA.Enabled = true;
-                AnswerB.Enabled = true;
-                AnswerC.Enabled = true;
-                AnswerD.Enabled = true;
+                SetMultipleChoiceOptions(true);
             }
             else if (TrueFalseCheckBox.Checked)
             {
-                // Nếu chọn True/False, không cho phép nhập A, B, C, D
-                OptionATextBox.Enabled = false;
-                OptionBTextBox.Enabled = false;
-                OptionCTextBox.Enabled = false;
-                OptionDTextBox.Enabled = false;
-
-                // Chỉ cho phép chọn True/False cho câu trả lời đúng
-                TrueAnswer.Enabled = true;
-                FalseAnswer.Enabled = true;
-
-                // Vô hiệu hóa các checkbox câu trả lời MultipleChoice
-                AnswerA.Enabled = false;
-                AnswerB.Enabled = false;
-                AnswerC.Enabled = false;
-                AnswerD.Enabled = false;
+                SetTrueFalseOptions(true);
             }
             else if (OpenEndedCheckBox.Checked)
             {
-                // Nếu chọn OpenEnded, không cho phép nhập A, B, C, D
-                OptionATextBox.Enabled = false;
-                OptionBTextBox.Enabled = false;
-                OptionCTextBox.Enabled = false;
-                OptionDTextBox.Enabled = false;
-
-                // Chỉ cho phép nhập câu trả lời tự do
-                TrueAnswer.Enabled = false;
-                FalseAnswer.Enabled = false;
-
-                // Vô hiệu hóa các checkbox câu trả lời MultipleChoice
-                AnswerA.Enabled = false;
-                AnswerB.Enabled = false;
-                AnswerC.Enabled = false;
-                AnswerD.Enabled = false;
+                SetOpenEndedOptions(true);
             }
             else
             {
-                // Nếu không chọn loại câu hỏi nào, tất cả sẽ bị vô hiệu hóa
-                OptionATextBox.Enabled = false;
-                OptionBTextBox.Enabled = false;
-                OptionCTextBox.Enabled = false;
-                OptionDTextBox.Enabled = false;
-
-                TrueFalseCheckBox.Enabled = true;
-                OpenEndedCheckBox.Enabled = true;
-                MultipleCheckBox.Enabled = true;
-
-                // Vô hiệu hóa tất cả các checkbox câu trả lời
-                AnswerA.Enabled = false;
-                AnswerB.Enabled = false;
-                AnswerC.Enabled = false;
-                AnswerD.Enabled = false;
-                TrueAnswer.Enabled = false;
-                FalseAnswer.Enabled = false;
+                DisableAllOptions();
             }
         }
 
+        private void SetMultipleChoiceOptions(bool enable)
+        {
+            OptionATextBox.Enabled = OptionBTextBox.Enabled = OptionCTextBox.Enabled = OptionDTextBox.Enabled = enable;
+            AnswerA.Enabled = AnswerB.Enabled = AnswerC.Enabled = AnswerD.Enabled = enable;
+            TrueAnswer.Enabled = FalseAnswer.Enabled = false;
+        }
+
+        private void SetTrueFalseOptions(bool enable)
+        {
+            OptionATextBox.Enabled = OptionBTextBox.Enabled = OptionCTextBox.Enabled = OptionDTextBox.Enabled = false;
+            AnswerA.Enabled = AnswerB.Enabled = AnswerC.Enabled = AnswerD.Enabled = false;
+            TrueAnswer.Enabled = FalseAnswer.Enabled = enable;
+        }
+
+        private void SetOpenEndedOptions(bool enable)
+        {
+            OptionATextBox.Enabled = OptionBTextBox.Enabled = OptionCTextBox.Enabled = OptionDTextBox.Enabled = false;
+            TrueAnswer.Enabled = FalseAnswer.Enabled = false;
+            AnswerA.Enabled = AnswerB.Enabled = AnswerC.Enabled = AnswerD.Enabled = false;
+        }
+
+        private void DisableAllOptions()
+        {
+            OptionATextBox.Enabled = OptionBTextBox.Enabled = OptionCTextBox.Enabled = OptionDTextBox.Enabled = false;
+            AnswerA.Enabled = AnswerB.Enabled = AnswerC.Enabled = AnswerD.Enabled = false;
+            TrueAnswer.Enabled = FalseAnswer.Enabled = false;
+        }
     }
 }
