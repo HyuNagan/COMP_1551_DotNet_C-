@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +21,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,40 +50,14 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
-              "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
-              "RelativeToolTip": "Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:27:51.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Menu.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.Designer.cs",
-              "RelativeDocumentMoniker": "Menu.Designer.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.Designer.cs",
-              "RelativeToolTip": "Menu.Designer.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwEYAAAAAAAAAAAAAAA==",
+              "Title": "PlayGameForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
+              "RelativeDocumentMoniker": "PlayGameForm.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs [Design]",
+              "RelativeToolTip": "PlayGameForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:26:42.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Menu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
-              "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs [Design]",
-              "RelativeToolTip": "Menu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:22:45.708Z",
+              "WhenOpened": "2025-04-27T11:12:54.752Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -101,26 +75,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T11:07:08.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "Menu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs [Design]",
+              "RelativeToolTip": "Menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:22:45.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.cs",
+              "RelativeToolTip": "Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:27:51.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuestionManager.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
+              "RelativeDocumentMoniker": "QuestionManager.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
+              "RelativeToolTip": "QuestionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:07:42.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayGameForm.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeDocumentMoniker": "PlayGameForm.cs",
               "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeToolTip": "PlayGameForm.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAlwJIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAqwKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T11:18:16.522Z",
               "EditorCaption": ""
@@ -128,31 +140,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PlayGameForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
-              "RelativeDocumentMoniker": "PlayGameForm.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs [Design]",
-              "RelativeToolTip": "PlayGameForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:12:54.752Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "QuestionManager.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
-              "RelativeDocumentMoniker": "QuestionManager.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
-              "RelativeToolTip": "QuestionManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:07:42.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "QuestionManager.cs [Design]",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
               "RelativeDocumentMoniker": "QuestionManager.cs",
@@ -161,6 +148,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T11:05:59.5Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Menu.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.Designer.cs",
+              "RelativeDocumentMoniker": "Menu.Designer.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Menu.Designer.cs",
+              "RelativeToolTip": "Menu.Designer.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:26:42.873Z",
+              "EditorCaption": ""
             }
           ]
         }

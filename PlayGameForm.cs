@@ -1,65 +1,66 @@
 ﻿using COMP1551.DBContext;
-using System;
-using System.Linq;
-using System.Windows.Forms;
 using COMP1551.QuestionContext;
 
 namespace COMP1551
 {
     public partial class PlayGameForm : Form
     {
-        private Question currentQuestion;
+        private List<Question> questions;
+        private Question currentQuestion; // Declare currentQuestion here
+        private int currentQuestionIndex = 0;
         private int score = 0;
         private QuizDbContext _context;
         private System.Windows.Forms.Timer timer;
-        private int timeLeft = 30; // Thời gian cho mỗi câu hỏi
+        private int timeLeft = 30; // Time per question
 
         public PlayGameForm()
         {
             InitializeComponent();
-            _context = new QuizDbContext(); // Khởi tạo context
-            LoadQuestion(); // Lấy câu hỏi đầu tiên
-            StartTimer(); // Bắt đầu bộ đếm thời gian
-            // Gán sự kiện cho các nút
+            _context = new QuizDbContext(); // Initialize context
+            LoadQuestions(); // Load all questions from the database
+            LoadQuestion(); // Load the first question
+            StartTimer(); // Start the timer
+
+            // Assign event handlers for the buttons
             button1.Click += Button_Click;
             button2.Click += Button_Click;
             button3.Click += Button_Click;
             button4.Click += Button_Click;
             SubmitBTN.Click += SubmitBTN_Click;
             this.FormClosed += PlayGameForm_FormClosed; // Add the FormClosed event handler
-
         }
+
         private void PlayGameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // When this form is closed, show the Menu form again
+            // Show the Menu form when the PlayGameForm is closed
             Menu menuForm = new Menu();
             menuForm.Show();
         }
 
+        // Load all questions from the database
+        private void LoadQuestions()
+        {
+            questions = _context.Questions.OrderBy(q => q.Id).ToList(); // Load questions in order of their ID
+        }
 
-        // Load câu hỏi từ database và cập nhật giao diện
+        // Load the current question and update the UI
         private void LoadQuestion()
         {
-            // Truy vấn câu hỏi ngẫu nhiên từ database
-            currentQuestion = _context.Questions
-                .OrderBy(q => Guid.NewGuid())  // Random câu hỏi
-                .FirstOrDefault();
-
-            if (currentQuestion != null)
+            if (currentQuestionIndex < questions.Count)
             {
-                // Hiển thị nội dung câu hỏi trên QuestionTextLBL
+                currentQuestion = questions[currentQuestionIndex]; // Get the current question
+
+                // Display the question text
                 QuestionTextLBL.Text = currentQuestion.Text;
 
-                // Kiểm tra loại câu hỏi và hiển thị các lựa chọn phù hợp
+                // Check the question type and update the UI accordingly
                 if (currentQuestion.Type == QuestionType.MultipleChoice)
                 {
-                    // Hiển thị các lựa chọn Multiple Choice
                     button1.Text = currentQuestion.OptionA;
                     button2.Text = currentQuestion.OptionB;
                     button3.Text = currentQuestion.OptionC;
                     button4.Text = currentQuestion.OptionD;
 
-                    // Hiển thị các nút chọn và ẩn TextBox và Submit button
                     button1.Visible = true;
                     button2.Visible = true;
                     button3.Visible = true;
@@ -69,11 +70,9 @@ namespace COMP1551
                 }
                 else if (currentQuestion.Type == QuestionType.TrueFalse)
                 {
-                    // Hiển thị các lựa chọn True/False
                     button1.Text = "True";
                     button2.Text = "False";
 
-                    // Hiển thị các nút chọn và ẩn TextBox và Submit button
                     button1.Visible = true;
                     button2.Visible = true;
                     button3.Visible = false;
@@ -83,7 +82,6 @@ namespace COMP1551
                 }
                 else if (currentQuestion.Type == QuestionType.OpenEnded)
                 {
-                    // Ẩn các nút chọn và hiển thị TextBox và Submit button cho câu hỏi mở
                     button1.Visible = false;
                     button2.Visible = false;
                     button3.Visible = false;
@@ -92,9 +90,15 @@ namespace COMP1551
                     SubmitBTN.Visible = true;
                 }
             }
+            else
+            {
+                // No more questions, end the game
+                MessageBox.Show($"Game Over! Your score is: {score}");
+                this.Close(); // Close the form and go back to Menu
+            }
         }
 
-        // Xử lý khi người chơi chọn câu trả lời
+        // Handle button clicks for multiple choice and true/false questions
         private void Button_Click(object sender, EventArgs e)
         {
             var selectedButton = sender as Button;
@@ -104,55 +108,55 @@ namespace COMP1551
             }
         }
 
-        // Kiểm tra câu trả lời và cập nhật điểm số
+        // Check if the selected answer is correct and update the score
         private void CheckAnswer(string selectedAnswer)
         {
             if (selectedAnswer == currentQuestion.Answer)
             {
                 score++;
-                ScoreValue.Text = score.ToString(); // Cập nhật điểm
+                ScoreValue.Text = score.ToString(); // Update score
             }
 
-            // Tải câu hỏi mới sau khi chọn đáp án
-            LoadQuestion();
+            // Move to the next question
+            currentQuestionIndex++;
+            LoadQuestion(); // Load the next question
         }
 
-        // Xử lý khi người chơi nhập câu trả lời cho câu hỏi dạng OpenEnded
+        // Handle the submit button click for open-ended questions
         private void SubmitBTN_Click(object sender, EventArgs e)
         {
-            // Kiểm tra câu trả lời nhập vào và cập nhật điểm
             if (OpenEndedTextBox.Text.Equals(currentQuestion.Answer, StringComparison.OrdinalIgnoreCase))
             {
                 score++;
-                ScoreValue.Text = score.ToString(); // Cập nhật điểm
+                ScoreValue.Text = score.ToString(); // Update score
             }
 
-            // Tải câu hỏi mới sau khi nhập câu trả lời
-            LoadQuestion();
+            // Move to the next question
+            currentQuestionIndex++;
+            LoadQuestion(); // Load the next question
         }
 
-        // Bắt đầu bộ đếm thời gian
+        // Start the timer for each question
         private void StartTimer()
         {
             timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000; // 1 giây
+            timer.Interval = 1000; // 1 second
             timer.Tick += (sender, e) =>
             {
-                // Cập nhật thời gian
                 if (timeLeft > 0)
                 {
                     timeLeft--;
-                    TimerValue.Text = timeLeft.ToString();
+                    TimerValue.Text = timeLeft.ToString(); // Update timer display
                 }
                 else
                 {
-                    // Hết thời gian, tự động kiểm tra câu trả lời
-                    LoadQuestion();
-                    timeLeft = 30; // Reset thời gian
+                    // Time's up, automatically go to the next question
+                    currentQuestionIndex++;
+                    LoadQuestion(); // Load the next question
+                    timeLeft = 30; // Reset the time
                 }
             };
             timer.Start();
         }
-
     }
 }
