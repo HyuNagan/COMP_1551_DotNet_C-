@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\dbcontext\\quizdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:dbcontext\\quizdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questioncontext\\questiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:questioncontext\\questiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questioncontext\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:questioncontext\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:playgameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|c:\\users\\huygi\\onedrive\\documents\\github\\comp_1551_dotnet_c-\\questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4E24F12-6CD7-4EE5-9946-CBF1BF1D6254}|COMP1551.csproj|solutionrelative:questionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,46 +38,58 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuizDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\DBContext\\QuizDbContext.cs",
-              "RelativeDocumentMoniker": "DBContext\\QuizDbContext.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\DBContext\\QuizDbContext.cs",
-              "RelativeToolTip": "DBContext\\QuizDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:53:57.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "QuestionType.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionContext\\QuestionType.cs",
-              "RelativeDocumentMoniker": "QuestionContext\\QuestionType.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionContext\\QuestionType.cs",
-              "RelativeToolTip": "QuestionContext\\QuestionType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:43:49.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayGameForm.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeDocumentMoniker": "PlayGameForm.cs",
               "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
               "RelativeToolTip": "PlayGameForm.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAYwJgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAlwJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:37:41.296Z",
+              "WhenOpened": "2025-04-27T11:18:16.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayGameForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.Designer.cs",
+              "RelativeDocumentMoniker": "PlayGameForm.Designer.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.Designer.cs",
+              "RelativeToolTip": "PlayGameForm.Designer.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:15:52.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayGameForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
+              "RelativeDocumentMoniker": "PlayGameForm.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs [Design]",
+              "RelativeToolTip": "PlayGameForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:12:54.752Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "QuestionManager.cs",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
+              "RelativeDocumentMoniker": "QuestionManager.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
+              "RelativeToolTip": "QuestionManager.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:07:42.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -89,45 +97,19 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:08:21.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuestionManager.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
-              "RelativeDocumentMoniker": "QuestionManager.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
-              "RelativeToolTip": "QuestionManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T14:05:52.502Z",
+              "WhenOpened": "2025-04-27T11:07:08.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionContext\\Question.cs",
-              "RelativeDocumentMoniker": "QuestionContext\\Question.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionContext\\Question.cs",
-              "RelativeToolTip": "QuestionContext\\Question.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBoAAAAAAAAAAAAAAA==",
+              "Title": "QuestionManager.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs",
+              "RelativeDocumentMoniker": "QuestionManager.cs",
+              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\QuestionManager.cs [Design]",
+              "RelativeToolTip": "QuestionManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:43:39.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayGameForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs",
-              "RelativeDocumentMoniker": "PlayGameForm.cs",
-              "ToolTip": "C:\\Users\\huygi\\OneDrive\\Documents\\GitHub\\COMP_1551_DotNet_C-\\PlayGameForm.cs [Design]",
-              "RelativeToolTip": "PlayGameForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:30:01.062Z",
+              "WhenOpened": "2025-04-27T11:05:59.5Z",
               "EditorCaption": " [Design]"
             }
           ]

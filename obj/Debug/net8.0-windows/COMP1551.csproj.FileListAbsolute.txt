@@ -47,7 +47,6 @@ C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-wi
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.csproj.AssemblyReference.cache
-C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.Form1.resources
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.csproj.GenerateResource.cache
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.AssemblyInfoInputs.cache
@@ -143,3 +142,4 @@ C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-wi
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.QuestionManager.resources
 C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.PlayGameForm.resources
+C:\Users\huygi\OneDrive\Documents\GitHub\COMP_1551_DotNet_C-\obj\Debug\net8.0-windows\COMP1551.Menu.resources

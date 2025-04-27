@@ -57,18 +57,42 @@ namespace COMP1551
             }
         }
 
+        // Tạo mới câu hỏi
+        // Tạo mới câu hỏi
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            if (IsMultipleQuestionTypeSelected())
+            // Kiểm tra nếu người dùng đã chọn hơn một loại câu hỏi
+            if ((MultipleCheckBox.Checked && TrueFalseCheckBox.Checked) ||
+                (MultipleCheckBox.Checked && OpenEndedCheckBox.Checked) ||
+                (TrueFalseCheckBox.Checked && OpenEndedCheckBox.Checked))
             {
-                ShowError("Bạn chỉ được chọn một loại câu hỏi duy nhất!");
-                return;
+                MessageBox.Show("Bạn chỉ được chọn một loại câu hỏi duy nhất!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Dừng việc tạo câu hỏi nếu có nhiều loại câu hỏi được chọn
             }
 
-            var newQuestion = CreateNewQuestion();
-            AddQuestionToDatabase(newQuestion);
-            LoadQuestions();
+            using (var context = new QuizDbContext())
+            {
+                var newQuestion = new Question
+                {
+                    Text = QuestionNameTextBox.Text,
+                    Type = MultipleCheckBox.Checked ? QuestionType.MultipleChoice :
+                          TrueFalseCheckBox.Checked ? QuestionType.TrueFalse : QuestionType.OpenEnded,
+                    // Nếu là OpenEnded, gán chuỗi trống cho các OptionA, OptionB, OptionC, OptionD
+                    OptionA = OpenEndedCheckBox.Checked ? "" : OptionATextBox.Text,
+                    OptionB = OpenEndedCheckBox.Checked ? "" : OptionBTextBox.Text,
+                    OptionC = OpenEndedCheckBox.Checked ? "" : OptionCTextBox.Text,
+                    OptionD = OpenEndedCheckBox.Checked ? "" : OptionDTextBox.Text,
+                    // Đảm bảo trường Answer không NULL, nếu là OpenEnded thì gán giá trị mặc định
+                    Answer = OpenEndedCheckBox.Checked ? "No Answer" : GetSelectedAnswer() // Giá trị mặc định cho Answer
+                };
+
+                context.Questions.Add(newQuestion);
+                context.SaveChanges();
+            }
+            LoadQuestions(); // Load lại danh sách câu hỏi từ database
         }
+
+
 
         private bool IsMultipleQuestionTypeSelected() =>
             (MultipleCheckBox.Checked && TrueFalseCheckBox.Checked) ||
