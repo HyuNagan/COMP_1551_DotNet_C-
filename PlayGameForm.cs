@@ -33,9 +33,12 @@ namespace COMP1551
         private void PlayGameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Show the Menu form when the PlayGameForm is closed
-            Menu menuForm = new Menu();
-            menuForm.UpdateScore(score);
-            menuForm.Show();
+            Menu menuForm = Application.OpenForms.OfType<Menu>().FirstOrDefault();
+            if (menuForm != null)
+            {
+                menuForm.UpdateScore(score); // Pass the score to the Menu form
+                menuForm.Show();
+            }
         }
 
         // Load all questions from the database
@@ -94,8 +97,7 @@ namespace COMP1551
             else
             {
                 // No more questions, end the game
-                MessageBox.Show($"Game Over! Your score is: {score}");
-                this.Close(); // Close the form and go back to Menu
+                GameOver();
             }
         }
 
@@ -151,13 +153,21 @@ namespace COMP1551
                 }
                 else
                 {
-                    // Time's up, automatically go to the next question
-                    currentQuestionIndex++;
-                    LoadQuestion(); // Load the next question
-                    timeLeft = 30; // Reset the time
+                    // Time's up, end the game
+                    GameOver(); // End the game if time runs out
                 }
             };
             timer.Start();
+        }
+
+        // End the game, show the game over message, and close the form
+        private void GameOver()
+        {
+            timer.Stop(); // Stop the timer when the game ends
+            MessageBox.Show($"Game Over! Your score is: {score}");
+
+            // Close the game form and pass the score to the Menu form
+            this.Close();
         }
     }
 }
