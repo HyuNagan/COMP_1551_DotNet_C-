@@ -12,7 +12,7 @@ namespace COMP1551.DBContext
     {
         public DbSet<Question> Questions { get; set; }
 
-        string connectionString = "Server =HYUNITRO5\\SA;Database = QuizGameDB;" +
+        string connectionString = "Server = HYUNITRO5\\SA;Database = QuizGameDB;" +
             "User Id=sa;Password = 123456;" +
             "Trusted_Connection = True;" +
             "TrustServerCertificate=True;";
